@@ -55,8 +55,11 @@ function mortgageCalculator() {
     let monthlyRate = principle * numerator / denominator; 
 
 
-    return Name + ", your monthly rate is " + monthlyRate.toFixed(2);
+return Name + ", your monthly rate is " + monthlyRate.toFixed(2);
+
+
 }
+    
 
 
 
@@ -69,14 +72,9 @@ mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 
 function mortgageCalculator(principle, interestRate, years) {
     
-    let monthlyInterestRate = interestRate / 12;
-    let periods = years * 12;
-    let numerator=  monthlyInterestRate * Math.pow(1 + monthlyInterestRate, periods); 
-    let denominator =  Math.pow(1 + monthlyInterestRate, periods) -1                   
-    let monthlyRate = principle * numerator / denominator; 
-
 
     return Name + ", your monthly rate is " + monthlyRate.toFixed(2);
+
 }
 
 
@@ -90,23 +88,20 @@ interest rate increases by 0.5% and if credit score is anywhere between 660 and 
 
 function mortgageCalculator(principle, interestRate, years, creditScore) {
     
-    if (creditScore > 740) {interestRate - 0.5}
-    if (creditScore < 660) {interestRate + 0.5}
-    else {interestRate = interestRate}
-    let monthlyInterestRate = interestRate / 12;
-    let periods = years * 12;
-    let numerator=  monthlyInterestRate * Math.pow(1 + monthlyInterestRate, periods); 
-    let denominator =  Math.pow(1 + monthlyInterestRate, periods) -1                   
-    let monthlyRate = principle * numerator / denominator; 
-
-
+    function mortgageCalculator(principle, interestRate, years, creditScore) {
+  
+        if (creditScore > 740) {interesteRate = (interestRate - (0.5 * interestRate))}
+       if (creditScore < 660) {interestRate = (interestRate + (0.5 * interestRate))}
+      if (creditScore >= 660 && creditScore <= 740) {interestRate = (interestRate)}
+       
     
-
-
-    return Name + ", your monthly rate is " + monthlyRate.toFixed(2);
+    
+        
+    
+    
+        return Name + ", with a credit score of " + creditScore + " your monthly rate is " + monthlyRate.toFixed(2);
+    }
 }
-
-
 
 
 // 🏡 Task 6: Loops
@@ -126,8 +121,16 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
-function variableInterestRate()
 
+function variableInterestRate(principle, interestRate, years) {
+
+    for (let i = 0, i < 10, i+0.5) {
+         
+        let message =  Name + ", with an interest rate of " + interestRate +", your monthly rate is " + monthlyRate;
+
+        console.log(message);
+    }
+}
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
