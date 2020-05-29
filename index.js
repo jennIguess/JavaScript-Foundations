@@ -124,7 +124,7 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 
 function variableInterestRate(principle, interestRate, years) {
 
-    for (let i = 0, i < 10, i+0.5) {
+    for (let i = 0.02, i < 10, i + 0.5) {
          
         let message =  Name + ", with an interest rate of " + interestRate +", your monthly rate is " + monthlyRate;
 
